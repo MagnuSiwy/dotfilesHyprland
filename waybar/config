@@ -1,0 +1,105 @@
+{
+    // ------------------------- Choose the order of the modules ------------------------------
+
+    "modules-left": ["cpu", "memory", "hyprland/workspaces"],
+    "modules-center": ["hyprland/window"],
+    "modules-right": ["wireplumber", "network", "battery", "clock"],
+    "spacing": 10,
+    "layer": "top",
+    "position": "top",
+    "height": 26,
+
+
+
+
+
+    // ------------------------- Modules configuration ------------------------------
+
+    "cpu": {
+        "format": "{usage}% ",
+        "tooltip": false
+    },
+
+
+    "memory": {
+        "format": "{}%  "
+    },
+
+
+    "hyprland/workspaces": {
+        "disable-scroll": true,
+        "format": "{icon}", //{name}
+	"persistent-workspaces": {
+		"1": [],
+		"2": [],
+        	"3": [],
+        	"4": [],
+        	"5": []
+        },
+        "format-icons": {
+            	"urgent": "",
+            	"focused": "",
+		"active": "",
+            	"default": ""
+        }
+    },
+
+
+    "wlr/taskbar": {
+        "format": "{icon}",
+        "icon-size": 20,
+    	"icon-theme": "Tela-Black-Dark",
+        "tooltip-format": "{title}",
+        "on-click": "activate",
+        "on-click-middle": "close",
+        "ignore-list": [
+            "kitty"
+        ],
+        "rewrite": {
+            "Firefox Web Browser": "Firefox"
+        }
+    },
+
+
+    "wireplumber": {
+        "format": "{volume}% {icon} ",
+        "format-muted": " ",
+        "on-click-right": "pavucontrol",
+        "format-icons": ["", "", ""]
+    },
+
+
+    "network": {
+        // "interface": "wlp2*", // (Optional) To force the use of this interface
+        "format-wifi": "{signalStrength}%  ",
+        "format-ethernet": "{ipaddr}/{cidr}  ",
+        "tooltip-format": "{ifname} via {gwaddr}  ",
+        "format-linked": "{ifname} (No IP)  ",
+        "format-disconnected": "Disconnected ⚠ ",
+        "format-alt": "{ifname}: {ipaddr}/{cidr}",
+	"on-click-right": "nm-connection-editor"
+    },
+
+
+    "battery": {
+        "states": {
+            // "good": 95,
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{capacity}% {icon}",
+        "format-charging": "{capacity}%  ",
+        "format-plugged": " ",
+        "format-alt": "{time}",
+        "format-good": " ", // An empty format will hide the module
+        "format-full": " ",
+        "format-icons": [" ", " ", " ", " ", " "]
+    },
+
+
+    "clock": {
+        "timezone": "Europe/Warsaw",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "format-alt": "{:%Y-%m-%d}"
+    },
+}

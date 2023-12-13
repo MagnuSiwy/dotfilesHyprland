@@ -1,0 +1,89 @@
+* {
+    font-family: FontAwesome, Roboto, Helvetica, Arial, sans-serif;
+    font-size: 13px;
+}
+
+window#waybar {
+    background-color: transparent;
+    transition-property: background-color;
+    transition-duration: .5s;
+    margin-bottom: 0;
+}
+
+button {
+    border-radius: 20px;
+    margin-left: 1px;
+    margin-right: 1px;
+}
+
+button:hover {
+    background: #6c7086;
+}
+
+
+.modules-left {
+    margin-left: 5px;
+}
+
+.modules-right {
+    margin-right: 5px;
+}
+
+
+#cpu, #memory, #workspaces, #taskbar, #window, #wireplumber, #network, #battery, #clock {
+    padding: 2px 10px;
+    margin-top: 2px;
+    background-color: rgba(49, 50, 68, 0.8);
+    border-radius: 20px;
+    color: #cdd6f4;
+}
+
+
+#workspaces {
+    border-radius: 20px;
+}
+
+#workspaces button {
+    padding: 0 5px;
+    border-radius: 10px;
+    color: #ffffff;
+}
+
+#workspaces button:hover {
+    background-color: #6c7086;
+}
+
+#workspaces button.active {
+    background-color: #6c7086;
+}
+
+#workspaces button.urgent {
+    background-color: #eb4d4b;
+}
+
+
+@keyframes blink {
+    to {
+        background-color: #ffffff;
+        color: #000000;
+    }
+}
+
+#battery.critical:not(.charging) {
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+
+#taskbar button.active {
+    background-color: #6c7086;
+}
+
+
+#window.empty {
+    background-color: transparent;
+}
+
