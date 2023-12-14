@@ -1,4 +1,4 @@
-# sudo pacman -S hyprland firefox vim viewnior vlc kitty mako wireplumber xdg-desktop-portal-hyprland polkit-kde-agent pavucontrol nm-connection-editor bluez bluez-utils blueman dolphin ark swayidle waybar qt5ct qt5-wayland qt6-wayland otf-font-awesome noto-fonts-emoji kvantum wofi ttf-roboto
+# sudo pacman -S hyprland firefox vim viewnior vlc kitty mako wireplumber xdg-desktop-portal-hyprland polkit-kde-agent pavucontrol nm-connection-editor bluez bluez-utils blueman dolphin ark swayidle waybar hyprpaper qt5ct qt5-wayland qt6-wayland otf-font-awesome noto-fonts-emoji kvantum wofi ttf-roboto
 
 # yay -S swaylock-effects-git tela-icon-theme nwg-look 
 
