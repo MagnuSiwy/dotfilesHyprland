@@ -1,5 +1,5 @@
 * {
-    font-family: Fontawesome, Roboto, Helvetica, Arial, sans-serif;
+    font-family: Roboto, "Font Awesome 6 Free";
     font-size: 13px;
 }
 
@@ -30,7 +30,7 @@ button:hover {
 }
 
 
-#cpu, #memory, #workspaces, #taskbar, #tray, #window, #wireplumber, #network, #battery, #clock {
+#cpu, #memory, #workspaces, #tray, #taskbar, #window, #wireplumber, #network, #battery, #clock {
     padding: 2px 10px;
     margin-top: 2px;
     background-color: rgba(49, 50, 68, 0.8);
@@ -86,3 +86,4 @@ button:hover {
 #window.empty {
     background-color: transparent;
 }
+

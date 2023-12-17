@@ -30,17 +30,21 @@
         "disable-scroll": true,
         "format": "{icon}", //{name}
 	"persistent-workspaces": {
-		"1": [],
-		"2": [],
-        	"3": [],
-        	"4": [],
-        	"5": []
+		"1": ["eDP-1"],
+		"2": ["eDP-1"],
+        	"3": ["eDP-1"],
+        	"4": ["eDP-1"],
+        	"5": ["eDP-1"],
+		"6": ["HDMI-A-1"],
+		"7": ["HDMI-A-1"],
+		"8": ["HDMI-A-1"],		
+		"9": ["HDMI-A-1"],
+		"0": ["HDMI-A-1"],
         },
         "format-icons": {
             	"urgent": "",
-            	"focused": "",
 		"active": "",
-            	"default": ""
+            	"default": "",
         }
     },
 
@@ -56,11 +60,11 @@
             "kitty"
         ],
         "rewrite": {
-            "Firefox Web Browser": "Firefox"
+            "Mozilla Firefox": "Firefox"
         }
     },
 
-	
+    
     "tray": {
     	"spacing": 10
     },
@@ -68,7 +72,7 @@
 
     "wireplumber": {
         "format": "{volume}% {icon}",
-        "format-muted": " ",
+        "format-muted": "",
         "on-click-right": "pavucontrol",
         "format-icons": ["", "", ""]
     },
