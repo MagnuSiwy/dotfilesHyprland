@@ -34,7 +34,7 @@ textbox-prompt-colon {
     expand: 			            false;
     str: 			                "";
     border-radius:                  100%;
-    background-color:               @SEL;
+    background-color:               @BG;
     text-color:                     @FG;
     padding:                        8px 12px 8px 12px;
     font:			                "Roboto 11";

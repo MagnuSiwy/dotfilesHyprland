@@ -10,6 +10,17 @@ window#waybar {
     margin-bottom: 0;
 }
 
+#window {
+    padding: 2px 10px;
+    margin-top: 2px;
+    background: none;
+    color: #d3c6aa;
+}
+
+#waybar.empty #window {
+    background: none;
+}
+
 button {
     border-radius: 20px;
     margin-left: 1px;
@@ -17,7 +28,7 @@ button {
 }
 
 button:hover {
-    background: #6c7086;
+    background: #7a8478;
 }
 
 
@@ -30,12 +41,13 @@ button:hover {
 }
 
 
-#cpu, #memory, #workspaces, #tray, #taskbar, #window, #custom-brightness, #wireplumber, #network, #battery, #clock {
+#cpu, #memory, #workspaces, #tray, #taskbar, #custom-brightness, #wireplumber, #bluetooth, #network, #battery, #clock {
     padding: 2px 10px;
     margin-top: 2px;
-    background-color: rgba(49, 50, 68, 0.8);
+    background-color: #1e2326;
     border-radius: 20px;
-    color: #cdd6f4;
+    border: 1px solid #7a8478;
+    color: #d3c6aa;
 }
 
 
@@ -44,17 +56,19 @@ button:hover {
 }
 
 #workspaces button {
-    padding: 0 5px;
-    border-radius: 10px;
-    color: #ffffff;
+    padding: 0 2px;
+    border-radius: 8px;
+    color: #d3c6aa;
+    margin: 0 2px;
 }
 
 #workspaces button:hover {
-    background-color: #6c7086;
+    background-color: #374145;
 }
 
 #workspaces button.active {
-    background-color: #6c7086;
+    background-color: #3d4841;
+    color: #a7c080;
 }
 
 #workspaces button.urgent {
@@ -79,11 +93,5 @@ button:hover {
 
 
 #taskbar button.active {
-    background-color: #6c7086;
+    background-color: #1e2326;
 }
-
-
-#waybar.empty #window {
-    background: none;
-}
-
