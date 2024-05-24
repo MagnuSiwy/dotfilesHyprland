@@ -1,13 +1,13 @@
 {
     // ------------------------- Choose the order of the modules ------------------------------
 
-    "modules-left": ["cpu", "memory", "hyprland/window"],
+    "modules-left": ["custom/calendar", "cpu", "memory", "custom/checkupdates", "hyprland/window"],
     "modules-center": ["hyprland/workspaces"],
-    "modules-right": ["tray", "custom/brightness", "wireplumber", "bluetooth", "network", "battery", "clock"],
+    "modules-right": ["tray", "wireplumber", "bluetooth", "network", "battery", "clock"],
     "spacing": 10,
     "layer": "top",
     "position": "top",
-    "height": 22,
+    "height": 28,
 
 
     // ------------------------- Modules configuration ------------------------------
@@ -22,6 +22,21 @@
         "format": "  {}%"
     },
 
+
+    "custom/calendar": {
+	"format": "  {}",
+	"exec": "date +\"%d %b %Y\"",
+	"on-click-right": "kitty --hold --title \"Calendar\" calcurse",
+    },
+
+
+    "custom/checkupdates": {
+	"exec": "~/.config/hypr/scripts/checkupdates.sh",
+	"restart-interval": 30,
+	"on-click-right": "kitty --hold --title \"Check updates\" checkupdates",
+    },
+
+
     "hyprland/window": {
 	"format": "{}",
     },
@@ -32,61 +47,39 @@
         "active-only": true,
     },
 
-
-    "wlr/taskbar": {
-        "format": "{icon}",
-        "icon-size": 20,
-    	"icon-theme": "Tela-Black-Dark",
-        "tooltip-format": "{name}",
-        "on-click": "activate",
-        "on-click-middle": "close",
-        "ignore-list": [
-            "kitty"
-        ],
-        "rewrite": {
-            "Mozilla Firefox": "Firefox"
-        }
-    },
-
     
     "tray": {
     	"spacing": 10,
-	"icon-size": 16,
-    },
-
-
-    "custom/brightness": {
-    	"format": "",
- 	"on-click": "wl-gammactl -c 0.7 -b 0.75",
-	"on-click-right": "killall wl-gammactl",
+	"icon-size": 13,
     },
 
 
     "wireplumber": {
         "format": "{icon}  {volume}%",
         "format-muted": "",
+	"max-volume": 150,
         "on-click-right": "pavucontrol",
         "format-icons": ["", "", ""]
     },
 
 
     "bluetooth": {
-	"format": " {status}",
-	"format-disabled": "",
-	"format-connected": " {num_connections} connected",
+	"format": " {device-alias}",
+	"format-disabled": "",
+	"format-off": "",
+	"format-connected": " {device-alias}",
+	"format-connected-battery": " {device-alias} {device_battery_percentage}%",
 	"tooltip": false,
-	"on-right-click": "blueman-manager",
+	"on-click-right": "blueman-manager",
     },
 
 
     "network": {
-        // "interface": "wlp2*", // (Optional) To force the use of this interface
         "format-wifi": "  {signalStrength}%",
-        "format-ethernet": "  {ipaddr}/{cidr}",
-        "tooltip-format": "  {ifname} via {gwaddr}",
+        "format-ethernet": "  {ipaddr}",
         "format-linked": "  {ifname} (No IP)",
-        "format-disconnected": "⚠  Disconnected",
-        "format-alt": "{ifname}: {ipaddr}/{cidr}",
+        "format-disconnected": "  Disconnected",
+	"tooltip": false,
 	"on-click-right": "nm-connection-editor"
     },
 
@@ -98,16 +91,19 @@
         },
 	"full-at": 96,
         "format": "{icon}  {capacity}%",
+	"format-full": "",
         "format-charging": " {capacity}%",
         "format-plugged": "",
-        "format-alt": "{time}",
-        "format-icons": ["", "", "", "", ""]
+        "format-icons": ["", "", "", "", ""],
+	"on-click": "wl-gammactl -c 0.8 -b 0.95",
+        "on-click-right": "killall wl-gammactl",
     },
 
 
     "clock": {
         "timezone": "Europe/Warsaw",
 	"format": "  {:%H:%M}",
-        "format-alt": "  {:%d-%m-%Y}"
+	"tooltip": false,
+	"on-click-right": "kitty --hold --title \"Calendar\" calcurse",
     },
 }

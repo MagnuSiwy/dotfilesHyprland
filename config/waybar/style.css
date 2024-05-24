@@ -3,17 +3,11 @@
     font-size: 13px;
 }
 
-window#waybar {
-    background-color: transparent;
-    transition-property: background-color;
-    transition-duration: .5s;
-    margin-bottom: 0;
-}
-
 #window {
-    padding: 2px 10px;
+    padding: 0 10px;
     margin-top: 2px;
-    background: none;
+    background-color: #1e2326;
+    border-radius: 20px;
     color: #d3c6aa;
 }
 
@@ -21,43 +15,26 @@ window#waybar {
     background: none;
 }
 
-button {
-    border-radius: 20px;
-    margin-left: 1px;
-    margin-right: 1px;
-}
-
-button:hover {
-    background: #7a8478;
-}
-
-
-.modules-left {
-    margin-left: 5px;
-}
-
-.modules-right {
-    margin-right: 5px;
-}
-
-
-#cpu, #memory, #workspaces, #tray, #taskbar, #custom-brightness, #wireplumber, #bluetooth, #network, #battery, #clock {
-    padding: 2px 10px;
-    margin-top: 2px;
+#cpu, #memory, #custom-calendar, #custom-checkupdates, #workspaces, #tray, #wireplumber, #bluetooth, #network, #battery, #clock {
+    padding: 0 10px;
+    margin: 2px 0 0 0;
     background-color: #1e2326;
     border-radius: 20px;
     border: 1px solid #7a8478;
     color: #d3c6aa;
 }
 
+#cpu {
+    margin-left: 4px;
+}
 
-#workspaces {
-    border-radius: 20px;
+#clock {
+    margin-right: 4px;
 }
 
 #workspaces button {
     padding: 0 2px;
-    border-radius: 8px;
+    border-radius: 10px;
     color: #d3c6aa;
     margin: 0 2px;
 }
@@ -72,14 +49,13 @@ button:hover {
 }
 
 #workspaces button.urgent {
-    background-color: #eb4d4b;
+    background-color: #e67e80;
 }
-
 
 @keyframes blink {
     to {
-        background-color: #ffffff;
-        color: #000000;
+        background-color: #e67e80;
+        color: #1e2326;
     }
 }
 
@@ -91,7 +67,6 @@ button:hover {
     animation-direction: alternate;
 }
 
-
-#taskbar button.active {
-    background-color: #1e2326;
+window#waybar {
+    background-color: transparent;
 }
