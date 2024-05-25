@@ -15,7 +15,7 @@
     background: none;
 }
 
-#cpu, #memory, #custom-calendar, #custom-checkupdates, #workspaces, #tray, #wireplumber, #bluetooth, #network, #battery, #clock {
+#custom-calendar, #cpu, #memory, #custom-checkupdates, #workspaces, #tray, #wireplumber, #bluetooth, #network, #battery, #clock {
     padding: 0 10px;
     margin: 2px 0 0 0;
     background-color: #1e2326;
@@ -24,7 +24,7 @@
     color: #d3c6aa;
 }
 
-#cpu {
+#custom-calendar {
     margin-left: 4px;
 }
 
