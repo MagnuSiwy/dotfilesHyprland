@@ -12,33 +12,39 @@
 
     // ------------------------- Modules configuration ------------------------------
 
+    "custom/calendar": {
+        "format": "  {}",
+        "exec": "date +\"%d %b %Y\"",
+        "on-click-right": "kitty --hold --title \"Calendar\" calcurse",
+	"tooltip": false,
+    },
+
+
     "cpu": {
         "format": "   {usage}%",
-        "tooltip": false
+        "tooltip": false,
     },
 
 
     "memory": {
-        "format": "  {}%"
-    },
-
-
-    "custom/calendar": {
-	"format": "  {}",
-	"exec": "date +\"%d %b %Y\"",
-	"on-click-right": "kitty --hold --title \"Calendar\" calcurse",
+        "format": "  {}%",
     },
 
 
     "custom/checkupdates": {
-	"exec": "~/.config/hypr/scripts/checkupdates.sh",
+	"exec": "~/.config/waybar/scripts/checkupdates.sh",
 	"restart-interval": 30,
+	"on-click": "kitty --hold --title \"Update\" sudo pacman -Syu",
 	"on-click-right": "kitty --hold --title \"Check updates\" checkupdates",
+	"tooltip": false,
     },
 
 
     "hyprland/window": {
-	"format": "{}",
+	"format": "{initialTitle}",
+	"rewrite": {
+	    ".*Discord": "Discord",
+	}
     },
 
 
@@ -58,6 +64,7 @@
         "format": "{icon}  {volume}%",
         "format-muted": "",
 	"max-volume": 150,
+	"on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
         "on-click-right": "pavucontrol",
         "format-icons": ["", "", ""]
     },
@@ -67,6 +74,7 @@
 	"format": " {device-alias}",
 	"format-disabled": "",
 	"format-off": "",
+	"format-on": "",
 	"format-connected": " {device-alias}",
 	"format-connected-battery": " {device-alias} {device_battery_percentage}%",
 	"tooltip": false,
@@ -75,7 +83,7 @@
 
 
     "network": {
-        "format-wifi": "  {signalStrength}%",
+        "format-wifi": "  {essid} {signalStrength}%",
         "format-ethernet": "  {ipaddr}",
         "format-linked": "  {ifname} (No IP)",
         "format-disconnected": "  Disconnected",
