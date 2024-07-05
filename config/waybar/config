@@ -50,7 +50,7 @@
 
     "hyprland/workspaces": {
         "format": "{name}",
-        "active-only": true,
+        "active-only": false,
     },
 
     
