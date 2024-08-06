@@ -34,7 +34,7 @@
     "custom/checkupdates": {
 	"exec": "~/.config/waybar/scripts/checkupdates.sh",
 	"restart-interval": 30,
-	"on-click": "kitty --hold --title \"Update\" sudo pacman -Syu",
+	"on-click": "kitty --hold --title \"Update\" yay -Syu",
 	"on-click-right": "kitty --hold --title \"Check updates\" checkupdates",
 	"tooltip": false,
     },
