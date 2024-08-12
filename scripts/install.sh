@@ -1,6 +1,6 @@
 # Install basic apps needed for the config to work as intended
 
-yay -S --needed hyprland hypridle hyprlock pacman-contrib grim slurp wl-clipboard firefox viewnior vlc kitty mako xdg-desktop-portal-hyprland polkit-gnome pavucontrol nm-connection-editor ranger waybar hyprpaper qt6ct qt5-wayland qt6-wayland noto-fonts-emoji nwg-look bluez p7zip blueman-git rofi-wayland
+yay -S --needed hyprland hypridle hyprlock pacman-contrib grim slurp wl-clipboard firefox kitty mako xdg-desktop-portal-hyprland polkit-gnome pavucontrol nm-connection-editor ranger waybar hyprpaper qt6ct qt5-wayland qt6-wayland noto-fonts-emoji nwg-look bluez p7zip blueman-git rofi-wayland calcurse
 
 
 # Link the config files to the .config folder
