@@ -5,7 +5,14 @@ yay -S --needed hyprland hypridle hyprlock pacman-contrib grim slurp wl-clipboar
 
 # Link the config files to the .config folder
 
-for link in $(find ~/ -name "dotfilesHyprland" -type d 2>/dev/null)/config/*
+DOTFILES_LOCATION=$(find ~/ -name "dotfilesHyprland" -type d 2>/dev/null)
+
+for link in $DOTFILES_LOCATION/config/*
 do
     ln -s $link $HOME/.config/
+done
+
+for link in $DOTFILES_LOCATION/appearance/.*
+do
+    ln -s $link $HOME/
 done
