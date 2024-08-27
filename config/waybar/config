@@ -16,7 +16,7 @@
         "format": "  {}",
         "exec": "date +\"%d %b %Y\"",
         "on-click-right": "kitty --hold --title \"Calendar\" calcurse",
-	"tooltip": false,
+	    "tooltip": false,
     },
 
 
@@ -32,19 +32,19 @@
 
 
     "custom/checkupdates": {
-	"exec": "~/.config/waybar/scripts/checkupdates.sh",
-	"restart-interval": 30,
-	"on-click": "kitty --hold --title \"Update\" echo "sudo pacman -Syu" && sudo pacman -Syu",
-	"on-click-right": "kitty --hold --title \"Check updates\" checkupdates",
-	"tooltip": false,
+	    "exec": "~/.config/waybar/scripts/checkupdates.sh",
+	    "restart-interval": 30,
+	    "on-click": "kitty --hold --title \"Update\" sudo pacman -Syu",
+	    "on-click-right": "kitty --hold --title \"Check updates\" checkupdates",
+	    "tooltip": false,
     },
 
 
     "hyprland/window": {
-	"format": "{initialTitle}",
-	"rewrite": {
-	    ".*Discord": "Discord",
-	}
+	    "format": "{initialTitle}",
+	    "rewrite": {
+	        ".*Discord.*": "Discord",
+	    }
     },
 
 
@@ -56,29 +56,29 @@
     
     "tray": {
     	"spacing": 10,
-	"icon-size": 13,
+	    "icon-size": 13,
     },
 
 
     "wireplumber": {
         "format": "{icon}  {volume}%",
         "format-muted": "",
-	"max-volume": 150,
-	"on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+	    "max-volume": 150,
+	    "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
         "on-click-right": "pavucontrol",
         "format-icons": ["", "", ""]
     },
 
 
     "bluetooth": {
-	"format": " {device-alias}",
-	"format-disabled": "",
-	"format-off": "",
-	"format-on": "",
-	"format-connected": " {device-alias}",
-	"format-connected-battery": " {device-alias} {device_battery_percentage}%",
-	"tooltip": false,
-	"on-click-right": "blueman-manager",
+    	"format": " {device-alias}",
+	    "format-disabled": "",
+    	"format-off": "",
+	    "format-on": "",
+    	"format-connected": " {device-alias}",
+	    "format-connected-battery": " {device-alias} {device_battery_percentage}%",
+    	"tooltip": false,
+	    "on-click-right": "blueman-manager",
     },
 
 
@@ -87,8 +87,8 @@
         "format-ethernet": "  {ipaddr}",
         "format-linked": "  {ifname} (No IP)",
         "format-disconnected": "  Disconnected",
-	"tooltip": false,
-	"on-click-right": "nm-connection-editor"
+	    "tooltip": false,
+    	"on-click-right": "nm-connection-editor"
     },
 
 
@@ -97,26 +97,26 @@
             "warning": 20,
             "critical": 10,
         },
-	"full-at": 96,
+	    "full-at": 96,
         "format": "{icon}  {capacity}%",
-	"format-full": "",
+    	"format-full": "",
         "format-charging": " {capacity}%",
         "format-plugged": "",
         "format-icons": ["", "", "", "", ""],
-	"tooltip": false,
-	//"on-click": "wl-gammactl -c 0.8 -b 0.95",
+	    "tooltip": false,
+	    //"on-click": "wl-gammactl -c 0.8 -b 0.95",
         //"on-click-right": "killall wl-gammactl",
-	"on-scroll-up": "sh ~/.config/waybar/scripts/brightness.sh up",
-	"on-scroll-down": "sh ~/.config/waybar/scripts/brightness.sh down",
-	"on-click": "sh ~/.config/waybar/scripts/brightness.sh click",
-	"on-click-right": "sh ~/.config/waybar/scripts/brightness.sh click-right",
+	    "on-scroll-up": "sh ~/.config/waybar/scripts/brightness.sh up",
+    	"on-scroll-down": "sh ~/.config/waybar/scripts/brightness.sh down",
+	    "on-click": "sh ~/.config/waybar/scripts/brightness.sh click",
+    	"on-click-right": "sh ~/.config/waybar/scripts/brightness.sh click-right",
     },
 
 
     "clock": {
         "timezone": "Europe/Warsaw",
-	"format": "  {:%H:%M}",
-	"tooltip": false,
-	"on-click-right": "kitty --hold --title \"Calendar\" calcurse",
+	    "format": "  {:%H:%M}",
+	    "tooltip": false,
+	    "on-click-right": "kitty --hold --title \"Calendar\" calcurse",
     },
 }
