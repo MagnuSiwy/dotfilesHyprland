@@ -1,0 +1,50 @@
+* {
+	background-image: none;
+	box-shadow: none;
+    font-family: Roboto;
+}
+
+window {
+	background-color: rgba(30, 35, 38, 0.7);
+}
+
+button {
+    border-radius: 10;
+    border-color: #A7C080;
+    border-style: solid;
+	border-width: 2px;
+	text-decoration: none;
+    color: #D3C6AA;
+    margin: 190px 5px;
+	background-color: rgba(30, 35, 38, 0.9);
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+button:focus, button:active, button:hover {
+	background-color: #3C4841;
+	outline-style: none;
+}
+
+
+#lock, #exit, #reboot, #shutdown {
+    background-size: 30%;
+    background-position: 50% 35%;
+    background-repeat: no-repeat;
+}
+
+#lock {
+    background-image: url("icons/lock.svg");
+}
+
+#exit {
+    background-image: url("icons/exit.svg");
+}
+
+#reboot {
+    background-image: url("icons/reboot.svg");
+}
+
+#shutdown {
+    background-image: url("icons/shutdown.svg");
+}

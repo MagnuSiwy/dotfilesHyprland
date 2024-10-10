@@ -2,13 +2,23 @@
 
 # Install basic apps needed for the config to work as intended
 PACKAGES="hyprland hypridle hyprlock pacman-contrib grim slurp wl-clipboard firefox viewnior vlc kitty mako xdg-desktop-portal-hyprland polkit-gnome pavucontrol nm-connection-editor ranger waybar hyprpaper qt6ct qt5-wayland qt6-wayland noto-fonts-emoji nwg-look bluez p7zip blueman rofi-wayland"
-echo "Packages installation: $PACKAGES" 
+echo "Packages to install: $PACKAGES" 
 
 sudo pacman -S --needed $PACKAGES 
 
 
-# Link the config files to the .config folder
+# Use yay to install other neccessary packages
+echo "Do you want to install wlogout as well? (yay - AUR helper - needed) [Y/n]"
+read choice
 
+if [[ $choice == "n" ]] || [[ $choice == "N" ]]; then
+    echo "Package wlogout will not be installed"
+else
+    yay -S --needed wlogout
+fi
+
+
+# Link the config files to the .config folder
 DOTFILES_LOCATION=$(find ~/ -name "dotfilesHyprland" -type d 2>/dev/null)
 
 echo "Linking config files to .config..."
