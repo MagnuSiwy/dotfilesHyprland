@@ -87,6 +87,7 @@
         "format-ethernet": "  {ipaddr}",
         "format-linked": "  {ifname} (No IP)",
         "format-disconnected": "  Disconnected",
+        "format-icons": [],
 	    "tooltip": false,
     	"on-click-right": "nm-connection-editor"
     },
@@ -95,7 +96,7 @@
     "battery": {
         "states": {
             "warning": 20,
-            "critical": 10,
+            "critical": 15,
         },
 	    "full-at": 96,
         "format": "{icon}  {capacity}%",
@@ -104,12 +105,10 @@
         "format-plugged": "",
         "format-icons": ["", "", "", "", ""],
 	    "tooltip": false,
-	    //"on-click": "wl-gammactl -c 0.8 -b 0.95",
-        //"on-click-right": "killall wl-gammactl",
-	    "on-scroll-up": "sh ~/.config/waybar/scripts/brightness.sh up",
-    	"on-scroll-down": "sh ~/.config/waybar/scripts/brightness.sh down",
-	    "on-click": "sh ~/.config/waybar/scripts/brightness.sh click",
-    	"on-click-right": "sh ~/.config/waybar/scripts/brightness.sh click-right",
+	    "on-scroll-up": "brightnessctl --quiet set 10%+",
+    	"on-scroll-down": "brightnessctl --quiet set 10%-",
+	    //"on-click": "sh ~/.config/waybar/scripts/brightness.sh click",
+    	//"on-click-right": "sh ~/.config/waybar/scripts/brightness.sh click-right",
     },
 
 
