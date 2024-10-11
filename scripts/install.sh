@@ -6,15 +6,20 @@ echo "Packages to install: $PACKAGES"
 
 sudo pacman -S --needed $PACKAGES 
 
+# Check if yay is installed
+is_yay_installed=$(pacman -Q yay | grep error)
+if [ -n $is_yay_installed ]; then
+    # Use yay to install other neccessary packages
+    echo "Do you want to install wlogout as well? (yay - AUR helper - needed) [Y/n]"
+    read choice
 
-# Use yay to install other neccessary packages
-echo "Do you want to install wlogout as well? (yay - AUR helper - needed) [Y/n]"
-read choice
-
-if [[ $choice == "n" ]] || [[ $choice == "N" ]]; then
-    echo "Package wlogout will not be installed"
-else
-    yay -S --needed wlogout
+    if [[ $choice == "n" ]] || [[ $choice == "N" ]]; then
+        echo "Package wlogout will not be installed"
+    else
+        yay -S --needed wlogout
+    fi
+else 
+    echo "Yay is not installed. Install an AUR helper of your choice. You need it to get wlogout (the logout/shutdown/reboot menu)"
 fi
 
 
