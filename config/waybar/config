@@ -1,9 +1,9 @@
 {
     // ------------------------- Choose the order of the modules ------------------------------
 
-    "modules-left": ["custom/calendar", "cpu", "memory", "custom/checkupdates", "hyprland/window"],
+    "modules-left": ["clock", "custom/checkupdates", "tray"],
     "modules-center": ["hyprland/workspaces"],
-    "modules-right": ["tray", "wireplumber", "bluetooth", "network", "battery", "clock"],
+    "modules-right": ["wireplumber", "bluetooth", "network", "battery"],
     "spacing": 10,
     "layer": "top",
     "position": "top",
@@ -12,30 +12,11 @@
 
     // ------------------------- Modules configuration ------------------------------
 
-    "custom/calendar": {
-        "format": "  {}",
-        "exec": "date +\"%d %b %Y\"",
-        "on-click-right": "kitty --hold --title \"Calendar\" calcurse",
-	    "tooltip": false,
-    },
-
-
-    "cpu": {
-        "format": "   {usage}%",
-        "tooltip": false,
-    },
-
-
-    "memory": {
-        "format": "  {}%",
-    },
-
-
     "custom/checkupdates": {
 	    "exec": "~/.config/waybar/scripts/checkupdates.sh",
-	    "restart-interval": 30,
-	    "on-click": "kitty --hold --title \"Update\" sudo pacman -Syu",
-	    "on-click-right": "kitty --hold --title \"Check updates\" checkupdates",
+	    "restart-interval": 60,
+	    "on-click": "kitty --hold --title \"Update\" ~/.config/waybar/scripts/update.sh",
+	    "on-click-right": "kitty --hold --title \"Check updates\" ~/.config/waybar/scripts/display_updates.sh",
 	    "tooltip": false,
     },
 
@@ -107,15 +88,30 @@
 	    "tooltip": false,
 	    "on-scroll-up": "brightnessctl --quiet set 10%+",
     	"on-scroll-down": "brightnessctl --quiet set 10%-",
-	    //"on-click": "sh ~/.config/waybar/scripts/brightness.sh click",
-    	//"on-click-right": "sh ~/.config/waybar/scripts/brightness.sh click-right",
     },
 
 
     "clock": {
         "timezone": "Europe/Warsaw",
-	    "format": "  {:%H:%M}",
-	    "tooltip": false,
+	    "format": "{:%H:%M - %d %b %Y}",
 	    "on-click-right": "kitty --hold --title \"Calendar\" calcurse",
+        "tooltip-format": "{calendar}",
+        "calendar": {
+                    "mode"          : "month",
+                    "mode-mon-col"  : 3,
+                    "on-scroll"     : 1,
+                    "format": {
+                              "months":     "<span color='#DBBC7F'><b>{}</b></span>",
+                              "days":       "<span color='#D3C6AA'><b>{}</b></span>",
+                              "weekdays":   "<span color='#7FBBB3'><b>{}</b></span>",
+                              "today":      "<span color='#E67E80'><b><u>{}</u></b></span>"
+                              }
+                    },
+        "actions":  {
+                    "on-scroll-up": "tz_up",
+                    "on-scroll-down": "tz_down",
+                    "on-scroll-up": "shift_up",
+                    "on-scroll-down": "shift_down"
+                    }
     },
 }

@@ -5,7 +5,7 @@
 
 #window {
     padding: 0 10px;
-    margin-top: 2px;
+    margin: 0 4px;
     background-color: #1e2326;
     border-radius: 20px;
     color: #d3c6aa;
@@ -28,25 +28,6 @@
     margin-left: 4px;
 }
 
-
-#custom-powerOff {
-    color: #e67e80;
-    margin: 0 2px 0 2px;
-    background: none;
-}
-
-#custom-exitHyprland {
-    background: none;
-    padding: 0 10px;
-    margin: 0 2px 0 2px;
-}
-
-#custom-reboot {
-    margin: 0 2px 0 2px; 
-    padding: 0 10px;
-    background: none;
-}
-
 @keyframes bt_discoverable {
     to {
         color: #d3c6aa;
@@ -66,7 +47,7 @@
 }
 
 #clock {
-    margin-right: 4px;
+    margin-left: 4px;
 }
 
 #workspaces button {
@@ -94,6 +75,10 @@
         background-color: #e67e80;
         color: #1e2326;
     }
+}
+
+#battery {
+    margin-right: 4px;
 }
 
 #battery.critical:not(.charging) {
