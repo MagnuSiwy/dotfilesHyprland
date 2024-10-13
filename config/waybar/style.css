@@ -3,19 +3,11 @@
     font-size: 13px;
 }
 
-#window {
-    padding: 0 10px;
-    margin: 0 4px;
-    background-color: #1e2326;
-    border-radius: 20px;
-    color: #d3c6aa;
-}
-
 #waybar.empty #window {
     background: none;
 }
 
-#custom-calendar, #cpu, #memory, #custom-checkupdates, #workspaces, #tray, #wireplumber, #bluetooth, #network, #battery, #clock {
+#custom-checkupdates, #workspaces, #wireplumber, #bluetooth, #network, #battery, #clock {
     padding: 0 10px;
     margin: 2px 0 0 0;
     background-color: #1e2326;
@@ -24,8 +16,10 @@
     color: #d3c6aa;
 }
 
-#custom-calendar {
-    margin-left: 4px;
+#tray {
+    padding: 0 10px;
+    margin: 2px 0 0 0;
+    color: #d3c6aa;
 }
 
 @keyframes bt_discoverable {
@@ -46,7 +40,7 @@
     animation-direction: alternate;
 }
 
-#clock {
+#workspaces {
     margin-left: 4px;
 }
 
@@ -77,7 +71,7 @@
     }
 }
 
-#battery {
+#network {
     margin-right: 4px;
 }
 
