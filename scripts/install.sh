@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Install basic apps needed for the config to work as intended
-PACKAGES="hyprland hypridle hyprlock pacman-contrib grim slurp wl-clipboard firefox viewnior vlc kitty mako xdg-desktop-portal-hyprland polkit-gnome pavucontrol nm-connection-editor ranger waybar hyprpaper qt6ct qt5-wayland qt6-wayland noto-fonts-emoji nwg-look bluez p7zip blueman rofi-wayland"
+PACKAGES="hyprland hypridle hyprlock pacman-contrib grim slurp wl-clipboard firefox viewnior vlc kitty mako xdg-desktop-portal-hyprland polkit-gnome pavucontrol nm-connection-editor ranger waybar hyprpaper qt6ct qt5-wayland qt6-wayland noto-fonts-emoji nwg-look bluez p7zip blueman rofi-wayland calcurse v4l2loopback-dkms"
 echo "Packages to install: $PACKAGES" 
 
 sudo pacman -S --needed $PACKAGES 
@@ -10,7 +10,7 @@ sudo pacman -S --needed $PACKAGES
 is_yay_installed=$(pacman -Q yay | grep error)
 if [ -n $is_yay_installed ]; then
     # Use yay to install other neccessary packages
-    echo "Do you want to install wlogout as well? (yay - AUR helper - needed) [Y/n]"
+    echo "Do you want to install wlogout as well? [Y/n]"
     read choice
 
     if [[ $choice == "n" ]] || [[ $choice == "N" ]]; then
@@ -19,7 +19,7 @@ if [ -n $is_yay_installed ]; then
         yay -S --needed wlogout
     fi
 else 
-    echo "Yay is not installed. Install an AUR helper of your choice. You need it to get wlogout (the logout/shutdown/reboot menu)"
+    echo "Yay is not installed. You need to get wlogout (the logout/shutdown/reboot menu) on your own."
 fi
 
 
