@@ -1,13 +1,15 @@
 {
     // ------------------------- Choose the order of the modules ------------------------------
-
+    "name": "bar",
     "modules-left": ["hyprland/workspaces", "custom/checkupdates"],
     "modules-center": ["clock"],
-    "modules-right": ["tray", "wireplumber", "bluetooth", "battery", "network"],
+    "modules-right": ["tray", "wireplumber", "bluetooth", "network", "battery"],
     "spacing": 10,
     "layer": "top",
     "position": "top",
     "height": 28,
+    "margin-right": 4,
+    "margin-left": 4,
 
 
     // ------------------------- Modules configuration ------------------------------
@@ -44,12 +46,12 @@
 
 
     "bluetooth": {
-    	"format": " {device-alias}",
+    	"format": "  {device_alias}",
 	    "format-disabled": "",
     	"format-off": "",
 	    "format-on": "",
-    	"format-connected": " {device-alias}",
-	    "format-connected-battery": " {device-alias} {device_battery_percentage}%",
+    	"format-connected": "  {device_alias}",
+	    "format-connected-battery": "  {device_alias} {device_battery_percentage}%",
     	"tooltip": false,
 	    "on-click-right": "blueman-manager",
     },
