@@ -3,8 +3,8 @@
 # This script turns off the laptop screen if an external display is connected
 # You can change the monitor names to whatever you want (hyprctl monitors to list the available monitors)
 
-laptopScreen="eDP-1"
-extScreen="HDMI-A-1"
+laptopScreen=$(hyprctl monitors all | grep Monitor | awk '{print $2}' | head -n 1)
+extScreen=$(hyprctl monitors all | grep Monitor | awk '{print $2}' | tail -n 1)
 
 if [ $(hyprctl monitors all | grep Monitor | wc -l) -ge 2 ]; then
     hyprctl keyword monitor $laptopScreen,disable
