@@ -1,0 +1,25 @@
+{
+  "session_dirs": [
+    "/usr/share/wayland-sessions",
+    "/usr/share/xsessions"
+  ],
+  "custom_sessions": [
+    {
+      "name": "Shell",
+      "exec": "/usr/bin/bash"
+    }
+  ],
+  "monitor_nums": [],
+  "form_on_monitors": [],
+  "delay_secs": 1,
+  "cmd-sleep": "systemctl suspend",
+  "cmd-reboot": "systemctl reboot",
+  "cmd-poweroff": "systemctl poweroff",
+  "gtk-theme": "Everforest-Green-Darker",
+  "gtk-icon-theme": "Tela-black-dark",
+  "gtk-cursor-theme": "Bibata-Original-Classic",
+  "prefer-dark-theme": true,
+  "template-name": "everforest.glade",
+  "lang": "",
+  "env-vars": []
+}

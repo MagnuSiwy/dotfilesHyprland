@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Install basic apps needed for the config to work as intended
-PACKAGES="hyprland hypridle hyprlock pacman-contrib grim slurp wl-clipboard firefox viewnior vlc kitty mako xdg-desktop-portal-hyprland polkit-gnome pavucontrol nm-connection-editor ranger waybar hyprpaper qt6ct qt5-wayland qt6-wayland noto-fonts-emoji nwg-look bluez p7zip blueman rofi-wayland calcurse v4l2loopback-dkms socat"
+PACKAGES="hyprland hypridle hyprlock pacman-contrib grim slurp wl-clipboard firefox viewnior vlc kitty mako xdg-desktop-portal-hyprland polkit-gnome pavucontrol nm-connection-editor ranger waybar hyprpaper qt6ct qt5-wayland qt6-wayland noto-fonts-emoji nwg-look bluez p7zip blueman rofi-wayland calcurse v4l2loopback-dkms socat greetd nwg-hello"
 echo "Packages to install: $PACKAGES" 
 
 sudo pacman -S --needed $PACKAGES 
@@ -37,3 +37,16 @@ for link in $DOTFILES_LOCATION/appearance/.*
 do
     ln -s $link $HOME/
 done
+
+echo "Copying fonts, theme, cursor and icons to their respective folders in /usr/share/..."
+sudo cp -r $DOTFILES_LOCATION/appearance/.fonts/Roboto* /usr/share/fonts/
+sudo cp -r $DOTFILES_LOCATION/appearance/.themes/Everforest-Green-Darker /usr/share/themes/
+sudo cp -r $DOTFILES_LOCATION/appearance/.icons/Bibata-Original-Classic /usr/share/icons/
+sudo cp -r $DOTFILES_LOCATION/appearance/.icons/Tela-black-dark /usr/share/icons/
+
+echo "Copying greetd and nwg-hello config files to their respective folders in /etc/..."
+sudo cp -f $DOTFILES_LOCATION/etc/nwg-hello/* /etc/nwg-hello/
+sudo cp $DOTFILES_LOCATION/etc/greetd/* /etc/greetd/
+
+echo ""
+echo "Done! Have fun on your new system!"
