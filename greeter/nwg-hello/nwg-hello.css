@@ -42,11 +42,10 @@ entry, entry:focus, button, button:focus {
 #clock-label {
 	font-family: RobotoMono;
 	font-size: 100px;
-    font-weight: bold;
 }
 
 #date-label {
-	font-size: 16px;
+	font-size: 14px;
 }
 
 #form-label {
