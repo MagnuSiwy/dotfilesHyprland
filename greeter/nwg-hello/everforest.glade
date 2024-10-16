@@ -8,6 +8,8 @@
       <object class="GtkBox" id="main-box">
         <property name="visible">True</property>
         <property name="can-focus">False</property>
+        <property name="halign">center</property>
+        <property name="valign">center</property>
         <child>
           <object class="GtkBox" id="form-wrapper">
             <property name="visible">True</property>
@@ -32,14 +34,14 @@
                       <object class="GtkBox">
                         <property name="visible">True</property>
                         <property name="can-focus">False</property>
-                        <property name="margin-bottom">28</property>
+                        <property name="margin-bottom">32</property>
                         <property name="orientation">vertical</property>
                         <child>
-                          <object class="GtkLabel" id="lbl-welcome">
+                          <object class="GtkLabel" id="lbl-clock">
                             <property name="visible">True</property>
                             <property name="can-focus">False</property>
-                            <property name="margin-bottom">12</property>
-                            <property name="label" translatable="yes">Welcome!</property>
+                            <property name="margin-bottom">2</property>
+                            <property name="label" translatable="yes">00:00</property>
                           </object>
                           <packing>
                             <property name="expand">False</property>
@@ -48,11 +50,10 @@
                           </packing>
                         </child>
                         <child>
-                          <object class="GtkLabel" id="lbl-clock">
+                          <object class="GtkLabel" id="lbl-date">
                             <property name="visible">True</property>
                             <property name="can-focus">False</property>
-                            <property name="margin-bottom">8</property>
-                            <property name="label" translatable="yes">00:00</property>
+                            <property name="label" translatable="yes">Monday, 13. January</property>
                           </object>
                           <packing>
                             <property name="expand">False</property>
@@ -61,10 +62,11 @@
                           </packing>
                         </child>
                         <child>
-                          <object class="GtkLabel" id="lbl-date">
+                          <object class="GtkLabel" id="lbl-welcome">
                             <property name="visible">True</property>
                             <property name="can-focus">False</property>
-                            <property name="label" translatable="yes">Monday, 13. January</property>
+                            <property name="margin-top">12</property>
+                            <property name="label" translatable="yes">Welcome!</property>
                           </object>
                           <packing>
                             <property name="expand">False</property>
@@ -83,7 +85,7 @@
                       <object class="GtkBox">
                         <property name="visible">True</property>
                         <property name="can-focus">False</property>
-                        <property name="margin-top">24</property>
+                        <property name="margin-top">32</property>
                         <property name="orientation">vertical</property>
                         <property name="spacing">6</property>
                         <child>
@@ -189,6 +191,7 @@
                         <property name="orientation">vertical</property>
                         <child>
                           <object class="GtkLabel" id="lbl-message">
+                            <property name="name">login-failed</property>
                             <property name="visible">True</property>
                             <property name="can-focus">False</property>
                             <property name="margin-bottom">4</property>
