@@ -39,13 +39,13 @@ do
 done
 
 echo "Copying fonts, theme, cursor and icons to their respective folders in /usr/share/..."
-sudo cp -r $DOTFILES_LOCATION/appearance/.fonts/* /usr/share/fonts/
+sudo cp -r $DOTFILES_LOCATION/appearance/.fonts/Roboto* /usr/share/fonts/
 sudo cp -r $DOTFILES_LOCATION/appearance/.themes/Everforest-Green-Darker /usr/share/themes/
 sudo cp -r $DOTFILES_LOCATION/appearance/.icons/Bibata-Original-Classic /usr/share/icons/
 sudo cp -r $DOTFILES_LOCATION/appearance/.icons/Tela-black-dark /usr/share/icons/
 
 echo "Copying greetd and nwg-hello config files to their respective folders in /etc/..."
-sudo cp -f $DOTFILES_LOCATION/greeter/nwg-hello/* /etc/nwg-hello/
+sudo cp $DOTFILES_LOCATION/greeter/nwg-hello/* /etc/nwg-hello/
 sudo cp $DOTFILES_LOCATION/greeter/greetd/* /etc/greetd/
 sudo cp $DOTFILES_LOCATION/greeter/icons/* /usr/share/nwg-hello/
 

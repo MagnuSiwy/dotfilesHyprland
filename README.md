@@ -31,11 +31,11 @@ ln -s ~/dotfilesHyprland/appearance/.* ~/
 Now's the hard part. You need to COPY (links might not work properly and they probably won't) the greeter files to where they belong in _/etc_ and _/usr/share/nwg-hello_:
 
 ```
-sudo cp -r ~/dotfilesHyprland/appearance/.fonts/* /usr/share/fonts/
+sudo cp -r ~/dotfilesHyprland/appearance/.fonts/Roboto* /usr/share/fonts/
 sudo cp -r ~/dotfilesHyprland/appearance/.themes/Everforest-Green-Darker /usr/share/themes/
 sudo cp -r ~/dotfilesHyprland/appearance/.icons/Bibata-Original-Classic /usr/share/icons/
 sudo cp -r ~/dotfilesHyprland/appearance/.icons/Tela-black-dark /usr/share/icons/
-sudo cp -f ~/dotfilesHyprland/greeter/nwg-hello/* /etc/nwg-hello/
+sudo cp ~/dotfilesHyprland/greeter/nwg-hello/* /etc/nwg-hello/
 sudo cp ~/dotfilesHyprland/greeter/greetd/* /etc/greetd/
 sudo cp ~/dotfilesHyprland/greeter/icons/* /usr/share/nwg-hello/
 ```
