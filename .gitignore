@@ -1,2 +1,3 @@
-/appearance/.icons/default
-/appearance/.fonts/OTF/.uuid
+appearance/.icons/default
+appearance/.fonts/*/.uuid
+appearance/.fonts/.uuid

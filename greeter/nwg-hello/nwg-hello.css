@@ -18,6 +18,7 @@ entry, entry:focus, button, button:focus {
 	border: 2px solid #A7C080;
 	border-radius: 20px;
 	padding: 6px 10px;
+	color: #D3C6AA;
 }
 
 #power-button {
@@ -56,8 +57,9 @@ entry, entry:focus, button, button:focus {
 }
 
 #password-entry {
+	font-family: RobotoMono;
+	letter-spacing: 2px;
 	padding: 0px 14px;
-	font-size: 20px;
 }
 
 #login-button:hover {
