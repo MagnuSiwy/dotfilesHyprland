@@ -49,5 +49,7 @@ sudo cp $DOTFILES_LOCATION/greeter/nwg-hello/* /etc/nwg-hello/
 sudo cp $DOTFILES_LOCATION/greeter/greetd/* /etc/greetd/
 sudo cp $DOTFILES_LOCATION/greeter/icons/* /usr/share/nwg-hello/
 
+sudo systemctl enable --now greetd
+
 echo ""
 echo "Done! Have fun on your new system!"
