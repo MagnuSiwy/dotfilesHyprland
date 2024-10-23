@@ -86,9 +86,10 @@ The sound widget opens the _pavucontrol_ app on right click. You can change the 
 
 # Screenshots
 
-![Screenshot]()
-![Screenshot]()
-![Screenshot]()
-![Screenshot]()
+![Screenshot](screenshots/notification.png)
+![Screenshot](screenshots/fullBar.png)
+![Screenshot](screenshots/secondWorkspace.png)
+![Screenshot](screenshots/lockscreen.png)
+![Screenshot](screenshots/greeter.png)
 
 ## Thanks to all the people that have made the amazing software I'm using on a daily basis. Thanks to you, developers spending these tens or hundreds of hours have been an amazing adventure
