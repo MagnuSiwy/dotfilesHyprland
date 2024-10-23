@@ -1,4 +1,3 @@
-
 # Dotfiles for [Hyprland](https://github.com/hyprwm/Hyprland) Tiling Window Manager (only for Arch based distros)
 
 # Installation
@@ -47,6 +46,8 @@ sudo cp -r ~/dotfilesHyprland/grub/whatever_theme /boot/grub/themes/
 sudo cp ~/dotfilesHyprland/grub/custom_40 /etc/grub.d/
 ```
 
+After doing all that you also have to edit the _/etc/default/grub_ file and set the grub theme there.
+
 
 # Some packages explained:
  - [hyprlock](https://github.com/hyprwm/hyprlock) (lock screen)
@@ -72,7 +73,7 @@ The bar is divided into segments:
  - MIDDLE: Clock and Calendar
  - RIGHT: System Tray, Sound, Bluetooth (disappears if disabled), WiFi, Battery (disappears if disabled)
 
-The sound widget opens the _pavucontrol_ app on right click. You can change the volume with mouse scroll and mute the sound with left click. WiFi widget opens _nm-connection-editor_ and bluetooth widget opens _blueman-manager_. Also, calendar widget opens _calcurse_ and checkupdates widget opens your terminal with a custom script that'l show you the updates from _yay_ (if installed) and _pacman_. You can also update your system by left clicking it (runs `yay -Syu` if _yay_ installed. Otherwise runs `sudo pacman -Syu`).
+The sound widget opens the _pavucontrol_ app on right click. You can change the volume with mouse scroll and mute the sound with left click. WiFi widget opens _nm-connection-editor_ and bluetooth widget opens _blueman-manager_. Also, calendar widget opens _calcurse_ and checkupdates widget opens your terminal with a custom script that'll show you the updates from _yay_ (if installed) and _pacman_. You can also update your system by left clicking it (runs `yay -Syu` if _yay_ installed. Otherwise runs `sudo pacman -Syu`).
 
 
 # Theming:
@@ -91,9 +92,11 @@ The sound widget opens the _pavucontrol_ app on right click. You can change the 
 ![Screenshot](screenshots/secondWorkspace.png)
 
 Lockscreen (hyprlock):
+
 ![Screenshot](screenshots/lockscreen.png)
 
 Login prompt (greetd + nwg_hello):
+
 ![Screenshot](screenshots/greeter.png)
 
-## Thanks to all the people that have made the amazing software I'm using on a daily basis. Thanks to you, developers spending these tens or hundreds of hours have been an amazing adventure
+#### Thanks to all the people that have made the amazing software I'm using on a daily basis. Thanks to you, developers spending these tens or hundreds of hours have been an amazing adventure
