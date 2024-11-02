@@ -15,7 +15,7 @@ button {
 	border-width: 2px;
 	text-decoration: none;
     color: #D3C6AA;
-    margin: 190px 5px;
+    margin: 10px 10px;
 	background-color: rgba(30, 35, 38, 0.9);
 	background-repeat: no-repeat;
 	background-position: center;
@@ -27,7 +27,7 @@ button:focus, button:active, button:hover {
 }
 
 
-#lock, #exit, #reboot, #shutdown {
+#lock, #exit, #suspend, #hibernate, #reboot, #shutdown {
     background-size: 30%;
     background-position: 50% 35%;
     background-repeat: no-repeat;
@@ -39,6 +39,14 @@ button:focus, button:active, button:hover {
 
 #exit {
     background-image: url("icons/exit.svg");
+}
+
+#suspend {
+    background-image: url("icons/suspend.svg");
+}
+
+#hibernate {
+    background-image: url("icons/hibernate.svg");
 }
 
 #reboot {
