@@ -95,7 +95,7 @@ Lockscreen (hyprlock):
 
 ![Screenshot](screenshots/lockscreen.png)
 
-Login prompt (greetd + nwg_hello):
+Login prompt (greetd + nwg-hello):
 
 ![Screenshot](screenshots/greeter.png)
 
