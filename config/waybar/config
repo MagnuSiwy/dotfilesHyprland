@@ -73,7 +73,6 @@
             "warning": 20,
             "critical": 15,
         },
-	    "full-at": 96,
         "format": "{icon}  {capacity}%",
     	"format-full": "",
         "format-charging": " {capacity}%",
