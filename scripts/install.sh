@@ -48,6 +48,8 @@ echo "Copying greetd and nwg-hello config files to their respective folders in /
 sudo cp $DOTFILES_LOCATION/greeter/nwg-hello/* /etc/nwg-hello/
 sudo cp $DOTFILES_LOCATION/greeter/greetd/* /etc/greetd/
 sudo cp $DOTFILES_LOCATION/greeter/icons/* /usr/share/nwg-hello/
+sudo mkdir /usr/share/wallpapers
+sudo cp $DOTFILES_LOCATION/config/hypr/wallpapers/plantWall_LeonardoAI.jpg /usr/share/wallpapers/
 
 sudo systemctl enable greetd
 
