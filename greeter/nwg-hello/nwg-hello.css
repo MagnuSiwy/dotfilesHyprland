@@ -60,6 +60,7 @@ entry, entry:focus, button, button:focus {
 	font-family: RobotoMono;
 	letter-spacing: 2px;
 	padding: 0px 14px;
+    caret-color: #1e2326;
 }
 
 #login-button:hover {
