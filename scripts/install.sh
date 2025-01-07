@@ -51,7 +51,11 @@ sudo cp $DOTFILES_LOCATION/greeter/icons/* /usr/share/nwg-hello/
 sudo mkdir /usr/share/wallpapers
 sudo cp $DOTFILES_LOCATION/config/hypr/wallpapers/plantWall_LeonardoAI.jpg /usr/share/wallpapers/
 
+echo "Enable the login manager"
 sudo systemctl enable greetd
+
+echo "Add the custom shutdown and reboot grub menu options"
+sudo cp ~/dotfilesHyprland/grub/40_custom /etc/grub.d/
 
 echo ""
 echo "Done! Have fun on your new system!"

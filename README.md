@@ -1,4 +1,4 @@
-# Dotfiles for [Hyprland](https://github.com/hyprwm/Hyprland) Tiling Window Manager (only for Arch based distros)
+# Dotfiles for [Hyprland](https://github.com/hyprwm/Hyprland) Tiling Window Manager (made for Arch based distros)
 
 # Installation
 
@@ -6,12 +6,14 @@
 
 __As I am still one of the new Linux users I have to say that you shouldn't use the script before checking it out. If you're new to Linux - DON'T TRUST EVERY SCRIPT YOU FIND ON THE INTERNET. Most of the open source projects won't hurt you but you still should be cautious__
 
-To use the dotfiles you need some packages (some of them listed below with a short explanation why you need them). You can easily start using the dotfiles by installing them with the `install.sh` script. You can find it in the _scripts_ folder. It's role is to install all of the packages that are needed to use the dotfiles, link the config files where they need to be, link the appearance packages to their respective directories and copy whatever needs to be copied to other directories under root. Everything that has to be copied to either _/etc_ or _/usr_ is needed so that the greeter/login manager would work. Cursor theme and fonts are unmodified however the GTK theme has been slightly changed (darker background). The script also copies the grub theme and `40_custom` file to grub config (for restart and shutdown buttons in the grub menu). For the grub theme to work after running the script you need to change the theme in _/etc/default/grub_ and update the grub with `sudo grub-mkconfig -o /boot/grub/grub.cfg`.
+To use the dotfiles you need some packages (some of them listed below with a short explanation why you need them). You can easily start using the dotfiles by installing them with the `install.sh` script. You can find it in the _scripts_ folder. It's role is to install all of the packages that are needed to use the dotfiles, link the config files where they need to be, link the appearance packages to their respective directories and copy whatever needs to be copied to other directories under root. Everything that is copied to either _/etc_ or _/usr_ is needed for the greeter/login manager to work. Cursor theme and fonts are unmodified however the GTK theme has been slightly changed (darker background). The script also copies a `40_custom` file to grub config (for restart and shutdown options in the grub menu).
 
-We also need to set the theme and the cursor if Hyprland fails to do so in a separate _nwg-look_ app. What Hyprland cannot change is the default font and icons that you can find in GTK settings (_nwg-look_) and QT6 settings (_qt6ct_) apps.
+We also need to set the theme and the cursor if Hyprland fails to do so in a separate app (_nwg-look_). What Hyprland cannot change is the default font and icons that you can find in GTK settings (_nwg-look_) and QT6 settings (_qt6ct_) apps.
+
+If any files have been added after dotfiles' update, just run `install.sh` once again (it will not try to install anything you already have, it will not link anything if files exist and it will not copy files that haven't changed).
 
 ### Manually
-If you link the config files to where they should be, you can just `git pull` after the config gets an update and get the latest changes. If any files have been added, just run `install.sh` once again (it will not try to install anything you already have, it will not link anything if files exist and it will not copy files that haven't changed). If you just copy all of the files, you will have to copy them again with each dotfiles update so be ready to do that each time.
+If you link the config files to where they should be, you can just `git pull` after the config gets an update and get the latest changes (that's apart from the greeter since it's files are copied and not linked). If you just copy all of the files, you will have to copy them again with each dotfiles update.
 
 __Set your own dotfilesHyprland directory if needed__
 
@@ -39,19 +41,16 @@ sudo cp ~/dotfilesHyprland/greeter/greetd/* /etc/greetd/
 sudo cp ~/dotfilesHyprland/greeter/icons/* /usr/share/nwg-hello/
 ```
 
-Copy the grub theme from _grub_ to _/boot/grub/themes_ and copy the `40_custom` file with the custom menu settings to _/etc/grub.d/_:
+If you want the additional shutdown and reboot options in grub menu copy the `40_custom` file to _/etc/grub.d/_:
 
 ```
-sudo cp -r ~/dotfilesHyprland/grub/whatever_theme /boot/grub/themes/
-sudo cp ~/dotfilesHyprland/grub/custom_40 /etc/grub.d/
+sudo cp ~/dotfilesHyprland/grub/40_custom /etc/grub.d/
 ```
-
-After doing all that you also have to edit the _/etc/default/grub_ file and set the grub theme there.
 
 
 # Some packages explained:
  - [hyprlock](https://github.com/hyprwm/hyprlock) (lock screen)
- - [hypridle](https://github.com/hyprwm/hypridle) (idle management)
+ - [hypridle](https://github.com/hyprwm/hypridle) (idle manager)
  - [greetd](https://github.com/kennylevinsen/greetd) and [nwg-hello](https://github.com/nwg-piotr/nwg-hello) (Greeter / login manager and it's GTK GUI)
  - [rofi-wayland](https://github.com/lbonn/rofi) (dmenu - Roboto Mono Nerd Font needed)
  - [mako](https://github.com/sqlalchemy/mako) (notifications)
@@ -99,4 +98,4 @@ Login prompt (greetd + nwg-hello):
 
 ![Screenshot](screenshots/greeter.png)
 
-#### Thanks to all the people that have made the amazing software I'm using on a daily basis. Thanks to you, developers spending these tens or hundreds of hours have been an amazing adventure
+#### Thanks to all the people that have made the amazing software I'm using on a daily basis. Thanks to you, developers, these tens or hundreds of hours have been an amazing adventure
