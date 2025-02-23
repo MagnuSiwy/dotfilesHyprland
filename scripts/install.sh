@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Install basic apps needed for the config to work as intended
-PACKAGES="hyprland hypridle hyprlock pacman-contrib grim slurp wl-clipboard firefox viewnior vlc kitty mako xdg-desktop-portal-hyprland polkit-gnome pavucontrol nm-connection-editor ranger waybar hyprpaper qt6ct qt5-wayland qt6-wayland noto-fonts-emoji nwg-look bluez p7zip blueman rofi-wayland calcurse v4l2loopback-dkms socat greetd nwg-hello brightnessctl"
+PACKAGES="hyprland hypridle hyprlock pacman-contrib grim slurp wl-clipboard firefox vlc kitty mako xdg-desktop-portal-hyprland polkit-gnome pavucontrol nm-connection-editor ranger waybar hyprpaper qt6ct qt5-wayland qt6-wayland noto-fonts-emoji nwg-look bluez p7zip blueman rofi-wayland calcurse socat greetd nwg-hello brightnessctl"
 echo "Packages to install: $PACKAGES" 
 
 sudo pacman -S --needed $PACKAGES 
