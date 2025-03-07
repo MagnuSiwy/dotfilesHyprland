@@ -1,3 +1,5 @@
 appearance/.icons/default
 appearance/.fonts/*/.uuid
 appearance/.fonts/.uuid
+
+config/hypr/scripts/monitors.sh
