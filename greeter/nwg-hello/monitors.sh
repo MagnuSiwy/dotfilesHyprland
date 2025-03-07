@@ -1,13 +1,21 @@
 #! /bin/bash
 
-# This script turns off the laptop screen if an external display is connected
+# This script turns off the laptop screen if an external display/s is/are connected
 
-laptopScreen=$(hyprctl monitors all | grep Monitor | awk '{print $2}' | head -n 1)
-extScreen=$(hyprctl monitors all | grep Monitor | awk '{print $2}' | tail -n 1)
+monitors=($(hyprctl monitors all | grep Monitor | awk '{print $2}'))
+num_monitors=$(hyprctl monitors all | grep Monitor | wc -l)
 
-if [ $(hyprctl monitors all | grep Monitor | wc -l) -ge 2 ]; then
-    hyprctl keyword monitor $laptopScreen,disable
-	hyprctl keyword monitor $extScreen,highrr,0x0,1
+laptop=${monitors[0]}
+ext1=${monitors[1]:-}
+ext2=${monitors[2]:-}
+
+if [ "$num_monitors" -eq 2 ]; then    
+    hyprctl keyword monitor $laptop,disable
+    hyprctl keyword monitor $ext1,preferred,auto,1
+elif [ "$num_monitors" -ge 3 ]; then    
+    hyprctl keyword monitor $laptop,disable
+    hyprctl keyword monitor $ext1,disable
+    hyprctl keyword monitor $ext2,highrr,auto,1
 else
-	hyprctl keyword monitor $laptopScreen,preferred,auto,1
+	hyprctl keyword monitor $laptop,preferred,auto,1
 fi
