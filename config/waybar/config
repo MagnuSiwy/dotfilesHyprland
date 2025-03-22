@@ -10,6 +10,7 @@
     "height": 28,
     "margin-right": 4,
     "margin-left": 4,
+    "reload_style_on_change": true,
 
 
     // ------------------------- Modules configuration ------------------------------
@@ -25,7 +26,8 @@
 
     "hyprland/workspaces": {
         "format": "{name}",
-        "active-only": false,
+        "all-outputs": true,
+        "persistent-workspaces": {},
     },
 
     
@@ -64,7 +66,7 @@
         "format-disconnected": "  Disconnected",
         "format-icons": [],
 	    "tooltip": false,
-    	"on-click-right": "nm-connection-editor"
+    	"on-click-right": "kitty --hold --title \"Network Manager\" nmtui"
     },
 
 

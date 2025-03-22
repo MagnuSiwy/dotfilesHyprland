@@ -19,3 +19,9 @@ elif [ "$num_monitors" -ge 3 ]; then
 else
 	hyprctl keyword monitor $laptop,preferred,auto,1
 fi
+
+hyprctl dispatch workspace 1
+
+sleep 1
+pkill waybar
+waybar &
