@@ -43,6 +43,7 @@
 	    "max-volume": 150,
 	    "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
         "on-click-right": "pavucontrol",
+        "on-click-middle": "~/.config/waybar/scripts/toggle_sink.sh",
         "format-icons": ["", "", ""]
     },
 

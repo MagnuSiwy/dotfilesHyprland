@@ -72,7 +72,7 @@ The bar is divided into segments:
  - MIDDLE: Clock and Calendar
  - RIGHT: System Tray, Sound, Bluetooth (disappears if disabled), WiFi, Battery (disappears if disabled)
 
-The sound widget opens the _pavucontrol_ app on right click. You can change the volume with mouse scroll and mute the sound with left click. WiFi widget opens _nm-connection-editor_ and bluetooth widget opens _blueman-manager_. Also, calendar widget opens _calcurse_ and checkupdates widget opens your terminal with a custom script that'll show you the updates from _yay_ (if installed) and _pacman_. You can also update your system by left clicking it (runs `yay -Syu` if _yay_ installed. Otherwise runs `sudo pacman -Syu`).
+The sound widget opens the _pavucontrol_ app on right click. You can change the volume with mouse scroll, mute the sound with left click and change the default audio sink with middle click. WiFi widget opens _nm-connection-editor_ and bluetooth widget opens _blueman-manager_. Also, calendar widget opens _calcurse_ and checkupdates widget opens your terminal with a custom script that'll show you the updates from _yay_ (if installed) and _pacman_. You can also update your system by left clicking it (runs `yay -Syu` if _yay_ installed. Otherwise runs `sudo pacman -Syu`).
 
 
 # Theming:
