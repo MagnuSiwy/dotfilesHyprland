@@ -1,0 +1,37 @@
+output "Lenovo Group Limited 0x40A9 Unknown" {
+    mode 1920x1080@60.01
+    scale 1
+    alias $INTERNAL
+}
+
+output "HP Inc. HP 24x 1CR9500WLV" {
+    mode 1920x1080@143.85
+    scale 1
+    alias $DESK
+}
+
+output "Sony SONY TV 0x01010101" {
+    mode 1920x1080@60.00
+    scale 1
+    alias $TV
+}
+
+profile desk {
+    output $INTERNAL disable
+    output $DESK enable
+    output $TV disable
+    exec hyprctl dispatch workspace 1
+    exec systemctl --user restart waybar.service
+}
+
+profile couch {
+    output $INTERNAL disable
+    output $TV enable
+    exec hyprctl dispatch workspace 2
+    exec systemctl --user restart waybar.service
+}
+
+profile portable {
+    output eDP-1 enable
+    exec systemctl --user restart waybar.service
+}

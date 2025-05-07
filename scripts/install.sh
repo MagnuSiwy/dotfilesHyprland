@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Install basic apps needed for the config to work as intended
-PACKAGES="hyprland hypridle hyprlock pacman-contrib grim slurp wl-clipboard firefox vlc kitty mako xdg-desktop-portal-hyprland polkit-gnome pavucontrol nm-connection-editor ranger waybar hyprpaper qt6ct qt5-wayland qt6-wayland noto-fonts-emoji nwg-look bluez p7zip blueman rofi-wayland calcurse socat greetd nwg-hello brightnessctl"
+PACKAGES="hyprland hypridle hyprlock pacman-contrib grim slurp wl-clipboard firefox vlc kitty mako xdg-desktop-portal-gtk xdg-desktop-portal-hyprland polkit-gnome pavucontrol nm-connection-editor ranger waybar hyprpaper qt6ct qt5-wayland qt6-wayland noto-fonts-emoji nwg-look bluez p7zip blueman rofi-wayland rofi-calc calcurse socat greetd nwg-hello brightnessctl uwsm"
 echo "Packages to install: $PACKAGES" 
 
 sudo pacman -S --needed $PACKAGES 
@@ -51,11 +51,18 @@ sudo cp $DOTFILES_LOCATION/greeter/icons/* /usr/share/nwg-hello/
 sudo mkdir /usr/share/wallpapers
 sudo cp $DOTFILES_LOCATION/config/hypr/wallpapers/plantWall_LeonardoAI.jpg /usr/share/wallpapers/
 
-echo "Enable the login manager"
-sudo systemctl enable greetd
-
 echo "Add the custom shutdown and reboot grub menu options"
 sudo cp ~/dotfilesHyprland/grub/40_custom /etc/grub.d/
+
+echo "Enable required services (waybar, hyprpaper, hypridle, playerctl, greetd)"
+sudo systemctl daemon-reload
+systemctl --user enable waybar.service
+systemctl --user enable hyprpaper.service
+systemctl --user enable hypridle.service
+systemctl --user enable playerctld.service
+systemctl --user enable polkit-gnome.service
+systemctl --user enable kanshi.service
+sudo systemctl enable greetd
 
 echo ""
 echo "Done! Have fun on your new system!"
