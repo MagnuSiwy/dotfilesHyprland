@@ -2,4 +2,7 @@ appearance/.icons/default
 appearance/.fonts/*/.uuid
 appearance/.fonts/.uuid
 
+config/systemd/user/default.target.wants
+config/systemd/user/graphical-session.target.wants
+
 config/hypr/scripts/monitors.sh
