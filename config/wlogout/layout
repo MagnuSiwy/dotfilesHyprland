@@ -1,6 +1,6 @@
 {
     "label" : "exit",
-    "action" : "hyprctl exit",
+    "action" : "uwsm stop",
     "text" : "Exit Hyprland",
     "keybind" : "e"
 }

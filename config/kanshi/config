@@ -31,6 +31,14 @@ profile couch {
     exec systemctl --user restart waybar.service
 }
 
+profile dual_desk {
+    output $INTERNAL enable
+    output $DESK enable
+    output $TV disable
+    exec hyprctl dispatch workspace 1
+    exec systemctl --user restart waybar.service
+}
+
 profile portable {
     output eDP-1 enable
     exec systemctl --user restart waybar.service
